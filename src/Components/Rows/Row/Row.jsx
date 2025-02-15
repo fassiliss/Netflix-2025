@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react";
 import "./Row.css";
-import axios from "../../../utils/axios"
+import axios from "../../../utils/axios";
 import movieTrailer from "movie-trailer";
 import YouTube from "react-youtube";
 
@@ -30,9 +30,9 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
       movieTrailer(movie?.title || movie?.name || movie?.original_name).then(
         (url) => {
           console.log(url);
-          const urlParams = new URLSearchParams(new URL(url).Search)
-          console.log(urlParams)
-          console.log(urlParams.get("v"))
+          const urlParams = new URLSearchParams(new URL(url).search);
+          console.log(urlParams);
+          console.log(urlParams.get("v"));
           setTrailerUrl(urlParams.get("v"));
         }
       );
@@ -64,10 +64,10 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
         ))}
       </div>
 
-       <div style={{ padding: "40px" }}>
+      <div style={{ padding: "40px" }}>
         {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
-      </div> 
-    </div> 
+      </div>
+    </div>
   );
 };
 
