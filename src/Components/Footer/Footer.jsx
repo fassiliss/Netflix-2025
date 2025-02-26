@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
-import "./Footer.css"
+import "./Footer.css";
 
 const Footer = () => {
   return (
@@ -52,6 +52,6 @@ const Footer = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Footer
+export default Footer;
